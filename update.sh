@@ -6,16 +6,16 @@ echo "Current version: $CURR_VER"
 
 if [ "$LAST_VER" != "$CURR_VER" ]; then
     echo "Upgrading docker image"
+    echo "Pulling latest pihole"
+    docker-compose --env-file settings.env pull
     echo "Stopping pihole"
-    /snap/bin/docker-compose stop
+    docker-compose --env-file settings.env stop
     echo $?
     echo "Removing containers"
-    /snap/bin/docker-compose rm -f
+    docker-compose --env-file settings.env rm -f
     echo $?
-    echo "Pulling latest pihole"
-    /snap/bin/docker-compose pull
     echo "Starting pihole"
-    /snap/bin/docker-compose up -d
+    docker-compose --env-file settings.env up -d
     echo $?
     echo -n "$CURR_VER" > last_ver
 fi
