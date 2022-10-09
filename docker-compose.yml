@@ -40,7 +40,7 @@ services:
       - PUID=1000
       - PGID=1000
       - SERVERPORT=51820
-      - PEERDNS=auto
+      - PEERDNS=172.20.128.2
       - ALLOWEDIPS=0.0.0.0/0
       - LOG_CONFS=true
     volumes:

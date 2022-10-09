@@ -36,4 +36,15 @@ The `update.sh` script is intended to be run as a cron job at an interval of onc
 
 ```
 0 0 * * * cd /path/to/wirehole && ./update.sh 1> output.txt
-``` 
+```
+
+# Building
+
+```
+docker-compose --env-file settings.env build
+docker-compose --env-file settings.env up -d
+```
+
+The peer WireGuard QR code will be in the docker logs and also in the wireguard-docker subdirectory under `appdata/config/peer1/peer1.png`
+
+
