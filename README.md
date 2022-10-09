@@ -23,7 +23,7 @@ WEBPASSWORD='password'
 SERVERURL=<url pointing to VPN server IP>
 PEERS=1
 INTERNAL_SUBNET=192.168.2.1
-WIREGUARD_CONF_DIR=/path/to/wireguard-docker/appdata/config
+WIREGUARD_CONFIG_DIR=/path/to/wireguard-docker/appdata/config
 ```
 
 # Configure Update Script
